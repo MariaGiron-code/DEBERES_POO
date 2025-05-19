@@ -10,13 +10,41 @@ public class Postulante {
         private String condicionSocioeconomica;
         private String carrera;
         private double promedioAcademico;
+    //definir getters y setters de los atributos
 
-        // Constructor 1: Solo nombre y apellido
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+    public void setCondicionSocioeconomica(String condicionSocioeconomica) {
+        this.condicionSocioeconomica = condicionSocioeconomica;
+    }
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    // Constructor 1: Solo nombre y apellido
         public Postulante(String nombre, String apellido) {
             this.nombre = nombre;
             this.apellido = apellido;
             this.edad = 18; // Asume edad mínima
-            this.promedioAcademico = 0.0; // Sin definir aún
+            this.promedioAcademico = 89; // Sin definir aún
         }
 
         // Constructor 2: Nombre, apellido y carrera (con valores predeterminados)
@@ -47,6 +75,7 @@ public class Postulante {
         public String getApellido() { return apellido; }
         public int getEdad() { return edad; }
         public double getPromedioAcademico() { return promedioAcademico; }
+        public String getTelefono() { return telefono; }
         public String getCondicionSocioeconomica() { return condicionSocioeconomica; }
 
         public void setEdad(int edad) { this.edad = edad; }
@@ -55,7 +84,7 @@ public class Postulante {
         // Método para validar si cumple requisitos de beca
         public boolean cumpleRequisitos() {
             return (condicionSocioeconomica != null && condicionSocioeconomica.equalsIgnoreCase("Baja")) &&
-                    (edad > 18) && (promedioAcademico >= 85.0);
+                    (edad >= 18) && (promedioAcademico >= 85.0);
         }
 
         // Método para mostrar datos si califica a la beca

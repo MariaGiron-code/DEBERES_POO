@@ -10,12 +10,20 @@ public class Main_Postulante {
 
             // Actualización de valores usando set
             postulante1.setEdad(21);
+            postulante1.setTelefono("0987654321");
+            postulante1.setCorreo("marialopez@gmail.com");
             postulante1.setPromedioAcademico(90.0);
+            postulante1.getCondicionSocioeconomica();
+            postulante1.setNacionalidad("Ecuatoriana");
+            postulante1.setCondicionSocioeconomica("Baja");
+            postulante1.setCarrera("Ingeniería en Sistemas");
 
-            // Mostrar información
+            // Imprimir información de los postulantes
             postulante1.mostrarDatos();
+
             postulante2.mostrarDatos();
             postulante3.mostrarDatos();
         }
 
 }
+
