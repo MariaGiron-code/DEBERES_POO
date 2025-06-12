@@ -14,6 +14,12 @@ public class  Estudiante {
     public String getNombre() {
         return nombre;
     }
+    public int getEdad() {
+        return edad;
+    }
+    public String getMatricula() {
+        return matricula;
+    }
 
     public boolean validarEdad() {
         return edad >= 13 && edad <= 60;
