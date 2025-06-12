@@ -17,6 +17,9 @@ public abstract class Curso {
         public void asignarDocente(Docente docente) {
             this.docente = docente;
         }
+        public double getPrecio() {
+            return precio;
+        }
 
         public void mostrarResumen() {
             System.out.println("Curso: " + nombre);
