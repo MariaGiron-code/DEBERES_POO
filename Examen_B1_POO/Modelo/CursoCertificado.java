@@ -3,8 +3,8 @@ package Modelo;
 public class CursoCertificado extends CursoRegular {
     private boolean entregaCertificado;
 
-    public CursoCertificado(String nombre, int duracionSemanas, double precio, boolean evaluacionContinua, Docente docente) {
-        super(nombre, duracionSemanas, precio, evaluacionContinua,docente);
+    public CursoCertificado(String nombre, int duracionSemanas, double precio, Docente docente, boolean entregaCertificado) {
+        super(nombre, duracionSemanas, precio,docente);
         this.entregaCertificado = true;
     }
 
@@ -17,6 +17,6 @@ public class CursoCertificado extends CursoRegular {
         super.mostrarResumen();
         System.out.println("Tipo: Curso Certificado");
         System.out.println("Precio final con recargo: $" + calcularPrecioFinal());
-        System.out.println("Incluye certificado: Sí");
+        System.out.println("Incluye certificado: " + (entregaCertificado ? "Sí" : "No"));
     }
 }
