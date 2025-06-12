@@ -1,10 +1,10 @@
 package Modelo;
 
 public abstract class Curso {
-        protected String nombre;
-        protected int duracionSemanas;
-        protected double precio;
-        protected Docente docente;
+    private String nombre;
+    private int duracionSemanas;
+    private double precio;
+    private Docente docente;
 
         public Curso(String nombre, int duracionSemanas, double precio, Docente docente) {
             this.nombre = nombre;
@@ -17,19 +17,30 @@ public abstract class Curso {
         public void asignarDocente(Docente docente) {
             this.docente = docente;
         }
-        public double getPrecio() {
-            return precio;
-        }
 
-        public void mostrarResumen() {
-            System.out.println("Curso: " + nombre);
-            System.out.println("Duración: " + duracionSemanas + " semanas");
-            System.out.println("Precio: $" + precio);
-            if (docente != null) {
-                System.out.println("Docente: " + docente.getNombre());
-            } else {
-                System.out.println("Docente no asignado");
-            }
+    public void mostrarResumen() {
+        System.out.println("Curso: " + nombre);
+        System.out.println("Duración: " + duracionSemanas + " semanas");
+        System.out.println("Precio: $" + precio);
+        if (docente != null) {
+            System.out.println("Docente: " + docente.getNombre());
+        } else {
+            System.out.println("Docente no asignado");
         }
+    }
 
+    // Getters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public Docente getDocente() {
+        return docente;
+    }
 }
+
+
